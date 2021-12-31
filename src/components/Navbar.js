@@ -19,14 +19,14 @@ export default function Navbar(props) {
               <Link className="nav-link" to="/about">{props.aboutText}</Link>
             </li>
           </ul>
-          <div className="d-flex">
+          {/* <div className="d-flex">
             <div className="bg-primary rounded mx-2" onClick={() => {props.toggleMode('primary')}} style={{height: '30px', width: '30px', cursor: 'pointer'}}></div>
             <div className="bg-danger rounded mx-2" onClick={() => {props.toggleMode('danger')}} style={{height: '30px', width: '30px', cursor: 'pointer'}}></div>
             <div className="bg-success rounded mx-2" onClick={() => {props.toggleMode('success')}} style={{height: '30px', width: '30px', cursor: 'pointer'}}></div>
             <div className="bg-warning rounded mx-2" onClick={() => {props.toggleMode('warning')}} style={{height: '30px', width: '30px', cursor: 'pointer'}}></div>
-          </div>
+          </div> */}
           <div className={`form-check form-switch text-${props.mode === 'light' ? 'dark' : 'light'}`}>
-            <input className="form-check-input" type="checkbox" onClick={() => {props.toggleMode(null)}} role="switch" id="flexSwitchCheckDefault" />
+            <input className="form-check-input" type="checkbox" onClick={props.toggleMode} role="switch" id="flexSwitchCheckDefault" />
             <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Toggle Mode</label>
           </div>
         </div>
